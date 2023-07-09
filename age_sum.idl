@@ -1,0 +1,10 @@
+struct user
+{
+    name[20] char
+    age int
+} 
+
+service age_sum 
+{
+    int age_sum (user user1, user user2)
+}

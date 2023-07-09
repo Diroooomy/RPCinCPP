@@ -1,0 +1,19 @@
+{
+  "age": 21,
+  "gear": {
+    "suits": "2099"
+  },
+  "jobs": [
+    "student"
+  ],
+  "map": {
+    "one": 1,
+    "two": 2
+  },
+  "name": "diyuyi",
+  "numbers": [
+    1,
+    2,
+    3
+  ]
+}
