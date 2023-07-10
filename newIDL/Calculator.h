@@ -69,7 +69,6 @@ void add(char* buff)
 int add (int a, int b)
 {
     //TO_DO::
-    return a+b;
 }
 
 
@@ -128,7 +127,6 @@ void sub(char* buff)
 int sub (int a, int b)
 {
     //TO_DO::
-    return a-b;
 }
 
 

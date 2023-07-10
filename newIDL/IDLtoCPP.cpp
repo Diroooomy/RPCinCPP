@@ -62,8 +62,8 @@ string split(const string &str, const string &pattern) // 适用于linux下去�
 
 int main(int argc, char *argv[])
 {
-    string input_file = "age_sum.idl";
-    string type = "client";
+    string input_file = "Calculator.idl";
+    string type = "server";
     size_t pos = input_file.find('.');
     string temp = input_file.substr(0, pos);
     std::cout << temp << endl;
