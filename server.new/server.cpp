@@ -11,8 +11,10 @@
 #include "util.h"
 #include "Calculator.h"
 #include "age_sum.h"
+#include "json.hpp"
+using json = nlohmann::json;
 #define BUFFSIZE 2048
-#define DEFAULT_PORT 16555 // 指定端口为16555
+#define DEFAULT_PORT 16556 // 指定端口为16555
 #define MAXLINK 2048
 
 int sockfd, connfd; // 定义服务端套接字和客户端套接字
@@ -43,15 +45,17 @@ int main()
         }
 
         bzero(buff, BUFFSIZE);
-        recv(connfd, buff, BUFFSIZE - 1, 0);  //接收消息
-        std::string funcname = buff;
-        // std::cout << funcname << std::endl; // 服务名识别
-
-        bzero(buff, BUFFSIZE);
-        recv(connfd, buff, 20, 0);
+        recv(connfd, buff, BUFFSIZE-1, 0);  //接收消息
+        // std::string funcname = buff;
+        json j = json::parse(buff);
+        string funcname = j.at("funcname");
+        std::cout << buff << std::endl; // 服务名识别
+        // sleep(1);
+        // bzero(buff, BUFFSIZE);
+        // recv(connfd, buff, BUFFSIZE - 1, 0);
         // strncpy(func, buff, 20);
         // string funcname = func;
-        cout << "func:" << funcname << endl;
+        // cout << "func:" << funcname << endl;
         
 
         // 服务注册块

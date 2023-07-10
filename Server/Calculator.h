@@ -29,7 +29,7 @@ void add(char* buff)
     // cout << sizeof(add_msg::MSG) << endl;
     add_msg::MSG *msg = (add_msg::MSG *)buff;
     msg->ret = add(msg->params.a, msg->params.b);
-    cout << msg->ret;
+    // cout << msg->ret;
 }
 
 

@@ -86,8 +86,11 @@ int main(int argc, char *argv[])
     if (type == "client" || type == "Client")
     {
         outfile << "#include \"socket.h\"" << endl;
-        outfile << "#define BUFFSIZE 2048" << endl;
+        
     }
+    // outfile << "#include \"json.hpp\"" << endl;
+    outfile << "#define BUFFSIZE 2048" << endl;
+    // outfile << "using json = nlohmann::json;" << endl;
     outfile << "using namespace std;" << endl;
     int flag = 0;
     int writefunc = 0;
