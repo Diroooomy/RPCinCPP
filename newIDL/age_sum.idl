@@ -1,6 +1,6 @@
 struct user
 {
-    name[20] char
+    name string
     age int
 } 
 

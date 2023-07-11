@@ -57,8 +57,10 @@ void add(char* buff)
 {
     string s = buff;
     auto j = json::parse(s);
+    cout << "json:"<<j.dump() << endl;
     add_msg::MSG msg = j;
     msg.ret = add(msg.params.a, msg.params.b);
+    cout << "msg.ret:" << msg.ret << endl;
     json m = msg;
     string l = m.dump();
     bzero(buff, BUFFSIZE);
