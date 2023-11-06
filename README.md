@@ -1,4 +1,4 @@
-use C/C++ correctly is a really diffcult thing
+use C/C++ correctly is a really difficult thing
 
 带new的文件夹是使用了json序列化数据传输网络消息的代码
 不带new的是普通的将数据转为char*正常发送
